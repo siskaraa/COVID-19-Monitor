@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#000">
+
+    <TextView
+        android:id="@+id/labelTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Jumlah Kasus di Indonesia"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/positifCard"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelTitle"
+        android:layout_marginVertical="26dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titlePositif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Positif"
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/viewPositif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/positif"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/meninggalCard"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/positifCard"
+        app:layout_constraintLeft_toLeftOf="@id/positifCard"
+        android:layout_marginVertical="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/titleMeninggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meninggal"
+                    android:textColor="#000"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/viewMeninggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/meninggal"
+                    android:textSize="36sp"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sembuhCard"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/positifCard"
+            app:layout_constraintRight_toRightOf="@id/positifCard"
+            android:layout_marginVertical="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/titleSembuh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sembuh"
+                    android:textColor="#000"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/viewSembuh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/sembuh"
+                    android:textSize="36sp"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
